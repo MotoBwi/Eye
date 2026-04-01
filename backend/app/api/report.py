@@ -57,6 +57,7 @@ def generate_report():
             }), 400
 
         force_regenerate = data.get('force_regenerate', False)
+        language = data.get('language', 'en')  # Default to English
 
         # Get simulation info
         manager = SimulationManager()
@@ -130,11 +131,12 @@ def generate_report():
                     message="Initializing Report Agent..."
                 )
 
-                # Create Report Agent
+                # Create Report Agent with language parameter
                 agent = ReportAgent(
                     graph_id=graph_id,
                     simulation_id=simulation_id,
-                    simulation_requirement=simulation_requirement
+                    simulation_requirement=simulation_requirement,
+                    language=language
                 )
 
                 # Progress callback
@@ -497,6 +499,7 @@ def chat_with_report_agent():
         simulation_id = data.get('simulation_id')
         message = data.get('message')
         chat_history = data.get('chat_history', [])
+        language = data.get('language', 'en')  # Default to English
 
         if not simulation_id:
             return jsonify({
@@ -536,11 +539,12 @@ def chat_with_report_agent():
 
         simulation_requirement = project.simulation_requirement or ""
 
-        # Create Agent and chat
+        # Create Agent and chat with language parameter
         agent = ReportAgent(
             graph_id=graph_id,
             simulation_id=simulation_id,
-            simulation_requirement=simulation_requirement
+            simulation_requirement=simulation_requirement,
+            language=language
         )
 
         result = agent.chat(message=message, chat_history=chat_history)
