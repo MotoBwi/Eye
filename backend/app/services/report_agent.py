@@ -1259,10 +1259,10 @@ class ReportAgent:
         Returns:
             ReportOutline: 报告大纲
         """
-        logger.info("开始规划报告大纲...")
-        
+        logger.info("Starting report outline planning...")
+
         if progress_callback:
-            progress_callback("planning", 0, "正在分析模拟需求...")
+            progress_callback("planning", 0, "Analyzing simulation requirements..." if self.language == "en" else "正在分析模拟需求...")
         
         # 首先获取模拟上下文
         context = self.zep_tools.get_simulation_context(
@@ -1271,7 +1271,7 @@ class ReportAgent:
         )
 
         if progress_callback:
-            progress_callback("planning", 30, "Generating report outline..." if self.language == "en" else "正在生成报告大纲...")
+            progress_callback("planning", 30, "Generating report outline..." if self.language == "en" else "生成报告大纲...")
 
         system_prompt = get_plan_system_prompt(self.language)
         user_prompt = get_plan_user_prompt(
@@ -1294,7 +1294,7 @@ class ReportAgent:
             )
             
             if progress_callback:
-                progress_callback("planning", 80, "正在解析大纲结构...")
+                progress_callback("planning", 80, "Parsing outline structure..." if self.language == "en" else "解析大纲结构...")
             
             # 解析大纲
             sections = []
@@ -1704,7 +1704,7 @@ class ReportAgent:
             self.console_logger = ReportConsoleLogger(report_id)
             
             ReportManager.update_progress(
-                report_id, "pending", 0, "初始化报告...",
+                report_id, "pending", 0, "Initializing report..." if self.language == "en" else "初始化报告...",
                 completed_sections=[]
             )
             ReportManager.save_report(report)
@@ -1754,7 +1754,7 @@ class ReportAgent:
                 # 更新进度
                 ReportManager.update_progress(
                     report_id, "generating", base_progress,
-                    f"正在生成章节: {section.title} ({section_num}/{total_sections})",
+                    f"Generating section: {section.title} ({section_num}/{total_sections})" if self.language == "en" else f"正在生成章节: {section.title} ({section_num}/{total_sections})",
                     current_section=section.title,
                     completed_sections=completed_section_titles
                 )
@@ -1810,10 +1810,10 @@ class ReportAgent:
             
             # 阶段3: 组装完整报告
             if progress_callback:
-                progress_callback("generating", 95, "正在组装完整报告...")
-            
+                progress_callback("generating", 95, "Assembling final report..." if self.language == "en" else "正在组装完整报告...")
+
             ReportManager.update_progress(
-                report_id, "generating", 95, "正在组装完整报告...",
+                report_id, "generating", 95, "Assembling final report..." if self.language == "en" else "正在组装完整报告...",
                 completed_sections=completed_section_titles
             )
             

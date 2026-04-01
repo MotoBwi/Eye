@@ -270,12 +270,12 @@ class SimulationManager:
             
             # ========== 阶段1: 读取并过滤实体 ==========
             if progress_callback:
-                progress_callback("reading", 0, "正在连接Zep图谱...")
-            
+                progress_callback("reading", 0, "Connecting to Zep graph...")
+
             reader = ZepEntityReader()
-            
+
             if progress_callback:
-                progress_callback("reading", 30, "正在读取节点数据...")
+                progress_callback("reading", 30, "Reading node data...")
             
             filtered = reader.filter_defined_entities(
                 graph_id=state.graph_id,
@@ -288,25 +288,25 @@ class SimulationManager:
             
             if progress_callback:
                 progress_callback(
-                    "reading", 100, 
-                    f"完成，共 {filtered.filtered_count} 个实体",
+                    "reading", 100,
+                    f"Done, {filtered.filtered_count} entities found",
                     current=filtered.filtered_count,
                     total=filtered.filtered_count
                 )
-            
+
             if filtered.filtered_count == 0:
                 state.status = SimulationStatus.FAILED
-                state.error = "没有找到符合条件的实体，请检查图谱是否正确构建"
+                state.error = "No qualified entities found, please check if graph is properly built"
                 self._save_simulation_state(state)
                 return state
-            
+
             # ========== 阶段2: 生成Agent Profile ==========
             total_entities = len(filtered.entities)
-            
+
             if progress_callback:
                 progress_callback(
-                    "generating_profiles", 0, 
-                    "开始生成...",
+                    "generating_profiles", 0,
+                    "Starting generation...",
                     current=0,
                     total=total_entities
                 )
@@ -351,8 +351,8 @@ class SimulationManager:
             # Reddit 已经在生成过程中实时保存了，这里再保存一次确保完整性
             if progress_callback:
                 progress_callback(
-                    "generating_profiles", 95, 
-                    "保存Profile文件...",
+                    "generating_profiles", 95,
+                    "Saving profile files...",
                     current=total_entities,
                     total=total_entities
                 )
@@ -374,8 +374,8 @@ class SimulationManager:
             
             if progress_callback:
                 progress_callback(
-                    "generating_profiles", 100, 
-                    f"完成，共 {len(profiles)} 个Profile",
+                    "generating_profiles", 100,
+                    f"Done, {len(profiles)} profiles generated",
                     current=len(profiles),
                     total=len(profiles)
                 )
@@ -384,7 +384,7 @@ class SimulationManager:
             if progress_callback:
                 progress_callback(
                     "generating_config", 0, 
-                    "正在分析模拟需求...",
+                    "Analyzing simulation requirements...",
                     current=0,
                     total=3
                 )
@@ -394,7 +394,7 @@ class SimulationManager:
             if progress_callback:
                 progress_callback(
                     "generating_config", 30, 
-                    "正在调用LLM生成配置...",
+                    "Calling LLM to generate config...",
                     current=1,
                     total=3
                 )
@@ -413,7 +413,7 @@ class SimulationManager:
             if progress_callback:
                 progress_callback(
                     "generating_config", 70, 
-                    "正在保存配置文件...",
+                    "Saving config file...",
                     current=2,
                     total=3
                 )
@@ -428,8 +428,8 @@ class SimulationManager:
             
             if progress_callback:
                 progress_callback(
-                    "generating_config", 100, 
-                    "配置生成完成",
+                    "generating_config", 100,
+                    "Config generation complete",
                     current=3,
                     total=3
                 )
