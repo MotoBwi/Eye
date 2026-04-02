@@ -655,7 +655,8 @@ const handleNextStep = async () => {
   try {
     const res = await generateReport({
       simulation_id: props.simulationId,
-      force_regenerate: true
+      force_regenerate: true,
+      language: 'en'
     })
     
     if (res.success && res.data) {
