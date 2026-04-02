@@ -4,13 +4,6 @@
 
 A Simple and Universal Swarm Intelligence Engine, Predicting Anything
 
-[![GitHub Stars](https://img.shields.io/github/stars/666ghj/God's Eye?style=flat-square&color=DAA520)](https://github.com/666ghj/God's Eye/stargazers)
-[![GitHub Watchers](https://img.shields.io/github/watchers/666ghj/God's Eye?style=flat-square)](https://github.com/666ghj/God's Eye/watchers)
-[![GitHub Forks](https://img.shields.io/github/forks/666ghj/God's Eye?style=flat-square)](https://github.com/666ghj/God's Eye/network)
-[![Docker](https://img.shields.io/badge/Docker-Build-2496ED?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](http://discord.gg/ePf5aPaHnA)
-[![X](https://img.shields.io/badge/X-Follow-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/godseye_ai)
-
 </div>
 
 ## Overview
