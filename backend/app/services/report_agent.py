@@ -29,7 +29,7 @@ from .zep_tools import (
     InterviewResult
 )
 
-logger = get_logger('mirofish.report_agent')
+logger = get_logger('godseye.report_agent')
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -569,8 +569,8 @@ class ReportConsoleLogger:
         
         # 添加到 report_agent 相关的 logger
         loggers_to_attach = [
-            'mirofish.report_agent',
-            'mirofish.zep_tools',
+            'godseye.report_agent',
+            'godseye.zep_tools',
         ]
         
         for logger_name in loggers_to_attach:
@@ -585,8 +585,8 @@ class ReportConsoleLogger:
         
         if self._file_handler:
             loggers_to_detach = [
-                'mirofish.report_agent',
-                'mirofish.zep_tools',
+                'godseye.report_agent',
+                'godseye.zep_tools',
             ]
             
             for logger_name in loggers_to_detach:

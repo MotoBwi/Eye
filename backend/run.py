@@ -1,5 +1,5 @@
 """
-MiroFish Backend Startup Entry
+God's Eye Backend Startup Entry
 """
 
 import os

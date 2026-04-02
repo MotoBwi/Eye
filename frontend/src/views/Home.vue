@@ -2,9 +2,9 @@
   <div class="home-container">
     <!-- Top Navigation Bar -->
     <nav class="navbar">
-      <div class="nav-brand">MIROFISH</div>
+      <div class="nav-brand">GODSEYE</div>
       <div class="nav-links">
-        <a href="https://github.com/666ghj/MiroFish" target="_blank" class="github-link">
+        <a href="https://github.com/666ghj/GodsEye" target="_blank" class="github-link">
           Visit our GitHub <span class="arrow">↗</span>
         </a>
       </div>
@@ -26,7 +26,7 @@
 
           <div class="hero-desc">
             <p>
-              Even with just a paragraph of text, <span class="highlight-bold">MiroFish</span> can automatically generate a parallel world with up to <span class="highlight-orange">one million Agents</span> based on real-world seeds. Through the "God's eye view," inject variables to find the <span class="highlight-code">"local optimal solution"</span> in complex group interactions
+              Even with just a paragraph of text, <span class="highlight-bold">God's Eye</span> can automatically generate a parallel world with up to <span class="highlight-orange">one million Agents</span> based on real-world seeds. Through the "God's eye view," inject variables to find the <span class="highlight-code">"local optimal solution"</span> in complex group interactions
             </p>
             <p class="slogan-text">
               Let the future be rehearsed in the Agent group, let decisions win after a hundred battles<span class="blinking-cursor">_</span>
@@ -39,7 +39,7 @@
         <div class="hero-right">
           <!-- Logo Area -->
           <div class="logo-container">
-            <img src="../assets/logo/MiroFish_logo_left.jpeg" alt="MiroFish Logo" class="hero-logo" />
+            <img src="../assets/logo/gods_eye.png" alt="GodsEye Logo" class="hero-logo" />
           </div>
 
           <button class="scroll-down-btn" @click="scrollToBottom">
@@ -180,7 +180,7 @@
                   rows="6"
                   :disabled="loading"
                 ></textarea>
-                <div class="model-badge">Engine: MiroFish-V1.0</div>
+                <div class="model-badge">Engine: GodsEye-V1.0</div>
               </div>
             </div>
 
