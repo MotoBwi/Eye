@@ -1,0 +1,331 @@
+# Instincts generated from https://github.com/MotoBwi/Eye
+# Generated: 2026-04-02T06:16:37.907Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: Eye-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Commit Length
+
+## Action
+
+Keep commit messages concise (~25 characters)
+
+## Evidence
+
+- Average commit message length: 25 chars
+- Based on 5 commits
+
+---
+id: Eye-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: Eye-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: Eye-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: Eye-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: Eye-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: Eye-workflow-language-support-update
+trigger: "when doing language support update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Workflow Language Support Update
+
+## Action
+
+Follow the language-support-update workflow:
+1. Modify backend service files to update language-specific logic or prompts.
+2. Update backend API files to support the new or improved language.
+3. Optionally, update frontend components if user-facing language changes are needed.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: backend/app/services/*.py, backend/app/api/*.py, frontend/src/components/*.vue
+
+---
+id: Eye-workflow-documentation-and-assets-refactor
+trigger: "when doing documentation and assets refactor"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Workflow Documentation And Assets Refactor
+
+## Action
+
+Follow the documentation-and-assets-refactor workflow:
+1. Update README files and documentation.
+2. Add or replace static image assets in the static/image directory.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md, README-EN.md, static/image/*
+
+---
+id: eye-instinct-coding-naming
+trigger: "When creating or renaming files, functions, classes, or constants in Python code"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Coding Naming
+
+## Action
+
+Use snake_case for files, camelCase for functions, PascalCase for classes, and SCREAMING_SNAKE_CASE for constants
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions
+- Seen in backend/app/services/*.py
+
+---
+id: eye-instinct-coding-imports
+trigger: "When importing modules in Python files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Coding Imports
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+- Seen in backend/app/services/*.py
+
+---
+id: eye-instinct-coding-exports
+trigger: "When exporting functions or classes in Python modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Coding Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: eye-instinct-testing-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Testing Location
+
+## Action
+
+Place test files in a separate test directory, not mixed with source code
+
+## Evidence
+
+- Pattern in architecture.testLocation
+- commonFolders includes 'backend', 'frontend'
+
+---
+id: eye-instinct-testing-pattern
+trigger: "When writing tests for backend or frontend code"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Testing Pattern
+
+## Action
+
+Organize tests by type (e.g., unit, integration) matching the type-based module organization
+
+## Evidence
+
+- Pattern in architecture.moduleOrganization
+
+---
+id: eye-instinct-git-commit-format
+trigger: "When making a git commit"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Git Commit Format
+
+## Action
+
+Write short, freeform commit messages without prefixes; average length ~25 characters
+
+## Evidence
+
+- Pattern in commits.type: freeform
+- Examples: 'Ollama Support add', 'Documantations Refactor'
+
+---
+id: eye-instinct-workflow-language-support
+trigger: "When someone wants to add or improve language support (such as translating prompts, responses, or documentation)"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Workflow Language Support
+
+## Action
+
+Modify backend service files for language logic, update backend API files, and optionally update frontend components for user-facing language changes
+
+## Evidence
+
+- Workflow: language-support-update
+- Files: backend/app/services/*.py, backend/app/api/*.py, frontend/src/components/*.vue
+
+---
+id: eye-instinct-workflow-docs-assets
+trigger: "When someone wants to update documentation or refresh static images (e.g., logos, screenshots) for the project"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Workflow Docs Assets
+
+## Action
+
+Update README files and documentation, add or replace static image assets in the static/image directory
+
+## Evidence
+
+- Workflow: documentation-and-assets-refactor
+- Files: README.md, README-EN.md, static/image/*
+
