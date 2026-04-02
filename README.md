@@ -11,8 +11,6 @@ A Simple and Universal Swarm Intelligence Engine, Predicting Anything
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](http://discord.gg/ePf5aPaHnA)
 [![X](https://img.shields.io/badge/X-Follow-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/godseye_ai)
 
-[English](./README-EN.md) | [中文文档](./README.md)
-
 </div>
 
 ## Overview
