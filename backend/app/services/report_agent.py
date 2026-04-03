@@ -29,7 +29,7 @@ from .zep_tools import (
     InterviewResult
 )
 
-logger = get_logger('mirofish.report_agent')
+logger = get_logger('godseye.report_agent')
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -569,8 +569,8 @@ class ReportConsoleLogger:
         
         # 添加到 report_agent 相关的 logger
         loggers_to_attach = [
-            'mirofish.report_agent',
-            'mirofish.zep_tools',
+            'godseye.report_agent',
+            'godseye.zep_tools',
         ]
         
         for logger_name in loggers_to_attach:
@@ -585,8 +585,8 @@ class ReportConsoleLogger:
         
         if self._file_handler:
             loggers_to_detach = [
-                'mirofish.report_agent',
-                'mirofish.zep_tools',
+                'godseye.report_agent',
+                'godseye.zep_tools',
             ]
             
             for logger_name in loggers_to_detach:
@@ -767,8 +767,7 @@ Default在Twitter和Reddit两个平台同时采访，获取更全面的观点。
 
 def get_plan_system_prompt(language: str = "en") -> str:
     """Get the plan system prompt based on language"""
-    if language == "zh":
-        return PLAN_SYSTEM_PROMPT_ZH
+    # Always use English
     return PLAN_SYSTEM_PROMPT_EN
 
 PLAN_USER_PROMPT_TEMPLATE_EN = """\
@@ -817,20 +816,16 @@ PLAN_USER_PROMPT_TEMPLATE_ZH = """\
 
 def get_plan_user_prompt(language: str = "en", **kwargs) -> str:
     """Get the plan user prompt based on language"""
-    if language == "zh":
-        template = PLAN_USER_PROMPT_TEMPLATE_ZH
-    else:
-        template = PLAN_USER_PROMPT_TEMPLATE_EN
+    # Always use English
+    template = PLAN_USER_PROMPT_TEMPLATE_EN
     return template.format(**kwargs)
 
 # ── 章节生成 prompt (Language-aware) ──
 
 def get_section_system_prompt(language: str = "en", **kwargs) -> str:
     """Get the section system prompt based on language"""
-    if language == "zh":
-        template = SECTION_SYSTEM_PROMPT_TEMPLATE_ZH
-    else:
-        template = SECTION_SYSTEM_PROMPT_TEMPLATE_EN
+    # Always use English
+    template = SECTION_SYSTEM_PROMPT_TEMPLATE_EN
     return template.format(**kwargs)
 
 
@@ -890,8 +885,7 @@ SECTION_USER_PROMPT_TEMPLATE_ZH = """\
 
 def get_section_user_prompt(language: str = "en", **kwargs) -> str:
     """Get the section user prompt based on language"""
-    if language == "zh":
-        return SECTION_USER_PROMPT_TEMPLATE_ZH.format(**kwargs)
+    # Always use English
     return SECTION_USER_PROMPT_TEMPLATE_EN.format(**kwargs)
 
 
@@ -956,8 +950,7 @@ REACT_TOOL_LIMIT_MSG_ZH = (
 
 def get_chat_system_prompt(language: str = "en", **kwargs) -> str:
     """Get the chat system prompt based on language"""
-    if language == "zh":
-        return CHAT_SYSTEM_PROMPT_TEMPLATE_ZH.format(**kwargs)
+    # Always use English
     return CHAT_SYSTEM_PROMPT_TEMPLATE_EN.format(**kwargs)
 
 CHAT_OBSERVATION_SUFFIX_EN = "\n\nPlease answer the question concisely."

@@ -9,7 +9,7 @@ import functools
 from typing import Callable, Any, Optional, Type, Tuple
 from ..utils.logger import get_logger
 
-logger = get_logger('mirofish.retry')
+logger = get_logger('godseye.retry')
 
 
 def retry_with_backoff(
@@ -55,7 +55,7 @@ def retry_with_backoff(
                         logger.error(f"Function {func.__name__} failed after {max_retries} retries: {str(e)}")
                         raise
                     
-                    # 计算延迟
+                    # Calculate delay
                     current_delay = min(delay, max_delay)
                     if jitter:
                         current_delay = current_delay * (0.5 + random.random())
@@ -105,7 +105,7 @@ def retry_with_backoff_async(
                     last_exception = e
                     
                     if attempt == max_retries:
-                        logger.error(f"异步函数 {func.__name__} 在 {max_retries} 次重试后仍失败: {str(e)}")
+                        logger.error(f"Async function {func.__name__} failed after {max_retries} retries: {str(e)}")
                         raise
                     
                     current_delay = min(delay, max_delay)
@@ -154,16 +154,16 @@ class RetryableAPIClient:
         **kwargs
     ) -> Any:
         """
-        执行函数调用并在失败时重试
-        
+        Execute function with retry on failure
+
         Args:
-            func: 要调用的函数
-            *args: 函数参数
-            exceptions: 需要重试的异常Types
-            **kwargs: 函数关键字参数
-            
+            func: Function to call
+            *args: Function arguments
+            exceptions: Exception types to retry
+            **kwargs: Function keyword arguments
+
         Returns:
-            函数Returns值
+            Function return value
         """
         last_exception = None
         delay = self.initial_delay
@@ -176,15 +176,15 @@ class RetryableAPIClient:
                 last_exception = e
                 
                 if attempt == self.max_retries:
-                    logger.error(f"API调用在 {self.max_retries} 次重试后仍失败: {str(e)}")
+                    logger.error(f"API call failed after {self.max_retries} retries: {str(e)}")
                     raise
                 
                 current_delay = min(delay, self.max_delay)
                 current_delay = current_delay * (0.5 + random.random())
                 
                 logger.warning(
-                    f"API调用第 {attempt + 1} 次尝试失败: {str(e)}, "
-                    f"{current_delay:.1f}秒后重试..."
+                    f"API call attempt {attempt + 1} failed: {str(e)}, "
+                    f"retrying in {current_delay:.1f}s..."
                 )
                 
                 time.sleep(current_delay)
@@ -200,16 +200,16 @@ class RetryableAPIClient:
         continue_on_failure: bool = True
     ) -> Tuple[list, list]:
         """
-        批量调用并对每个失败项单独重试
-        
+        Batch call with individual retry for each failed item
+
         Args:
-            items: 要处理的项目列表
-            process_func: 处理函数，接收单个item作为参数
-            exceptions: 需要重试的异常Types
-            continue_on_failure: 单项失败后是否继续处理其他项
-            
+            items: List of items to process
+            process_func: Process function, takes single item as parameter
+            exceptions: Exception types to retry
+            continue_on_failure: Whether to continue processing other items after failure
+
         Returns:
-            (成功结果列表, 失败项列表)
+            (successful_results_list, failed_items_list)
         """
         results = []
         failures = []
@@ -224,7 +224,7 @@ class RetryableAPIClient:
                 results.append(result)
                 
             except Exception as e:
-                logger.error(f"处理第 {idx + 1} 项失败: {str(e)}")
+                logger.error(f"Failed to process item {idx + 1}: {str(e)}")
                 failures.append({
                     "index": idx,
                     "item": item,

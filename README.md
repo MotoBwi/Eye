@@ -1,30 +1,21 @@
 <div align="center">
 
-# MiroFish
+# God's Eye
 
 A Simple and Universal Swarm Intelligence Engine, Predicting Anything
-
-[![GitHub Stars](https://img.shields.io/github/stars/666ghj/MiroFish?style=flat-square&color=DAA520)](https://github.com/666ghj/MiroFish/stargazers)
-[![GitHub Watchers](https://img.shields.io/github/watchers/666ghj/MiroFish?style=flat-square)](https://github.com/666ghj/MiroFish/watchers)
-[![GitHub Forks](https://img.shields.io/github/forks/666ghj/MiroFish?style=flat-square)](https://github.com/666ghj/MiroFish/network)
-[![Docker](https://img.shields.io/badge/Docker-Build-2496ED?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](http://discord.gg/ePf5aPaHnA)
-[![X](https://img.shields.io/badge/X-Follow-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/mirofish_ai)
-
-[English](./README-EN.md) | [中文文档](./README.md)
 
 </div>
 
 ## Overview
 
-**MiroFish** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-fidelity parallel digital world. Within this space, thousands of intelligent agents with independent personalities, long-term memory, and behavioral logic freely interact and undergo social evolution. You can inject variables dynamically from a "God's-eye view" to precisely deduce future trajectories — **rehearse the future in a digital sandbox, and win decisions after countless simulations**.
+**God's Eye** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-fidelity parallel digital world. Within this space, thousands of intelligent agents with independent personalities, long-term memory, and behavioral logic freely interact and undergo social evolution. You can inject variables dynamically from a "God's-eye view" to precisely deduce future trajectories — **rehearse the future in a digital sandbox, and win decisions after countless simulations**.
 
 > You only need to: Upload seed materials (data analysis reports or interesting novel stories) and describe your prediction requirements in natural language
-> MiroFish will return: A detailed prediction report and a deeply interactive high-fidelity digital world
+> God's Eye will return: A detailed prediction report and a deeply interactive high-fidelity digital world
 
 ### Our Vision
 
-MiroFish is dedicated to creating a swarm intelligence mirror that maps reality. By capturing the collective emergence triggered by individual interactions, we break through the limitations of traditional prediction:
+God's Eye is dedicated to creating a swarm intelligence mirror that maps reality. By capturing the collective emergence triggered by individual interactions, we break through the limitations of traditional prediction:
 
 - **At the Macro Level**: We are a rehearsal laboratory for decision-makers, allowing policies and public relations to be tested at zero risk
 - **At the Micro Level**: We are a creative sandbox for individual users — whether deducing novel endings or exploring imaginative scenarios, everything can be fun, playful, and accessible
@@ -33,19 +24,19 @@ From serious predictions to playful simulations, we let every "what if" see its 
 
 ## Live Demo
 
-Visit our online demo to experience prediction simulations on trending public opinion events: [mirofish-live-demo](https://666ghj.github.io/mirofish-demo/)
+Visit our online demo to experience prediction simulations on trending public opinion events: [godseye-live-demo](https://666ghj.github.io/godseye-demo/)
 
 ## Demo Videos
 
 ### 1. Wuhan University Public Opinion Simulation
 
-Watch the complete demo video for prediction using MiroFish-generated "Wuhan University Public Opinion Report"
+Watch the complete demo video for prediction using God's Eye-generated "Wuhan University Public Opinion Report"
 
 [View Demo](https://www.bilibili.com/video/BV1VYBsBHEMY/)
 
 ### 2. Dream of the Red Chamber Lost Ending Simulation
 
-Watch MiroFish's deep prediction of the lost ending based on hundreds of thousands of words from the first 80 chapters of "Dream of the Red Chamber"
+Watch God's Eye's deep prediction of the lost ending based on hundreds of thousands of words from the first 80 chapters of "Dream of the Red Chamber"
 
 [View Demo](https://www.bilibili.com/video/BV1cPk3BBExq)
 
@@ -148,20 +139,20 @@ Reads `.env` from root directory by default, maps ports `3000 (frontend) / 5001 
 
 Join our community on Discord: [http://discord.gg/ePf5aPaHnA](http://discord.gg/ePf5aPaHnA)
 
-The MiroFish team is recruiting full-time/internship positions. If you're interested in multi-agent simulation and LLM applications, feel free to send your resume to: **mirofish@shanda.com**
+The God's Eye team is recruiting full-time/internship positions. If you're interested in multi-agent simulation and LLM applications, feel free to send your resume to: **godseye@shanda.com**
 
 ## Acknowledgments
 
-MiroFish has received strategic support and incubation from Shanda Group!
+God's Eye has received strategic support and incubation from Shanda Group!
 
-MiroFish's simulation engine is powered by **[OASIS (Open Agent Social Interaction Simulations)](https://github.com/camel-ai/oasis)**, We sincerely thank the CAMEL-AI team for their open-source contributions!
+God's Eye's simulation engine is powered by **[OASIS (Open Agent Social Interaction Simulations)](https://github.com/camel-ai/oasis)**, We sincerely thank the CAMEL-AI team for their open-source contributions!
 
 ## Project Statistics
 
-<a href="https://www.star-history.com/#666ghj/MiroFish&type=date&legend=top-left">
+<a href="https://www.star-history.com/#666ghj/God's Eye&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=666ghj/MiroFish&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=666ghj/MiroFish&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=666ghj/MiroFish&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=666ghj/God's Eye&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=666ghj/God's Eye&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=666ghj/God's Eye&type=date&legend=top-left" />
  </picture>
 </a>

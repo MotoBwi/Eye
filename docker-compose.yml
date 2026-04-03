@@ -1,9 +1,9 @@
 services:
-  mirofish:
-    image: ghcr.io/666ghj/mirofish:latest
+  godseye:
+    image: ghcr.io/666ghj/godseye:latest
     # Accelerated mirror (replace the above address if pulling is slow)
-    # image: ghcr.nju.edu.cn/666ghj/mirofish:latest
-    container_name: mirofish
+    # image: ghcr.nju.edu.cn/666ghj/godseye:latest
+    container_name: godseye
     env_file:
       - .env
     ports:

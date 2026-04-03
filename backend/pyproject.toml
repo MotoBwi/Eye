@@ -1,11 +1,11 @@
 [project]
-name = "mirofish-backend"
+name = "godseye-backend"
 version = "0.1.0"
-description = "MiroFish - A concise general-purpose swarm intelligence engine that predicts everything"
+description = "God's Eye - A concise general-purpose swarm intelligence engine that predicts everything"
 requires-python = ">=3.11"
 license = { text = "AGPL-3.0" }
 authors = [
-    { name = "MiroFish Team" }
+    { name = "GodsEye Team" }
 ]
 
 dependencies = [
