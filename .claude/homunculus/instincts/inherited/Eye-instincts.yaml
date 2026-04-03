@@ -1,0 +1,342 @@
+# Instincts generated from https://github.com/MotoBwi/Eye
+# Generated: 2026-04-03T07:27:35.068Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: Eye-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Commit Length
+
+## Action
+
+Keep commit messages concise (~20 characters)
+
+## Evidence
+
+- Average commit message length: 20 chars
+- Based on 4 commits
+
+---
+id: Eye-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: Eye-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: Eye-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: Eye-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: Eye-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: Eye-workflow-update-readme-documentation
+trigger: "when doing update readme documentation"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/MotoBwi/Eye
+---
+
+# Eye Workflow Update Readme Documentation
+
+## Action
+
+Follow the update-readme-documentation workflow:
+1. Open README.md
+2. Edit content (add, update, or remove sections, badges, links, etc.)
+3. Commit the changes with a descriptive message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md
+
+---
+id: eye-instinct-file-naming
+trigger: "When creating a new Python file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct File Naming
+
+## Action
+
+Name the file using snake_case
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: eye-instinct-function-naming
+trigger: "When defining a new function in Python"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: eye-instinct-class-naming
+trigger: "When defining a new class in Python"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: eye-instinct-constant-naming
+trigger: "When defining a constant in Python"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: eye-instinct-import-style
+trigger: "When importing modules in Python"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: eye-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: eye-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Test Location
+
+## Action
+
+Place test files in a separate folder from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: eye-instinct-commit-message-freeform
+trigger: "When making a git commit"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Commit Message Freeform
+
+## Action
+
+Write a short, freeform commit message without a prefix
+
+## Evidence
+
+- Pattern in commits.prefixes (empty)
+- Examples: 'Update README.md', 'Ollama Cloud API'
+
+---
+id: eye-instinct-commit-message-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Commit Message Length
+
+## Action
+
+Keep the commit message concise (around 20 characters on average)
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: eye-instinct-update-readme-workflow
+trigger: "When someone wants to update or clean up the project documentation in the README"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: MotoBwi/Eye
+---
+
+# Eye Instinct Update Readme Workflow
+
+## Action
+
+Open README.md, edit content (add, update, or remove sections, badges, links, etc.), and commit the changes with a descriptive message
+
+## Evidence
+
+- Workflow: update-readme-documentation
+- Commits: 'Update README.md', 'Remove badges and links from README'
+
